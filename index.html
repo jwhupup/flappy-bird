@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    * {
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+    }
+
+    input, textarea {
+      -webkit-user-select:auto;
+    } 
+
+    .start, .restart, .continue {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: rgb(88, 141, 226);
+      color: #fff;
+    }
+    .pause {
+      display: none;
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: rgb(242, 85, 50);
+      font-size: 12px;
+      color: #fff;
+    }
+    .person {
+      position: fixed;
+      top: 200px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px #888888;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+    当前浏览器不支持canvas，请更换浏览器查看。
+  </canvas>
+  <h5 class="score" style="position: fixed; top: 10px; left: 10px; color: #fff; padding: 0; margin: 0;"></h5>
+  <div class="person">
+    <img style="width: 100%;" src="http://www.jwhupup.cn/flappy-bird/assets/images/person.png" alt="">
+  </div>
+  <div class="start">开始游戏</div>
+  <h3 class="total-score" style="position: fixed; top: 260px; left: 50%; transform: translateX(-50%);"></h3>
+  <div class="restart" style="display: none;">重新开始</div>
+  <div class="continue" style="display: none;">继续</div>
+  <div class="pause">暂停</div>
+  <script src="http://www.jwhupup.cn/flappy-bird/index.js"></script>
+</body>
+</html>
